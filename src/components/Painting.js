@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Painting = ({ url, title, profileUrl, tag, price, quantity }) => {
   return (
@@ -13,6 +14,15 @@ const Painting = ({ url, title, profileUrl, tag, price, quantity }) => {
       <button type="button">add to cart</button>
     </div>
   );
+};
+
+Painting.propTypes = {
+  url: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  profileUrl: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
 };
 
 export default Painting;
